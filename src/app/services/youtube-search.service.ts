@@ -1,6 +1,7 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient, HttpRequest, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs/';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 import { SearchResult } from '../models/search-result.model';
 
 export const YOUTUBE_API_KEY = 'AIzaSyDOfT_BO81aEZScosfTYMruJobmpjqNeEk';
