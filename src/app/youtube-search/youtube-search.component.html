@@ -1,0 +1,13 @@
+<main role="main" class="container">
+    <div class="heading">
+        <h1>YouTube Search</h1>
+        <p class="lead">A YouTube search utility using the YouTube Search API and Angular 5</p>
+        <app-search-box (loading)="loading = $event" (results)="updateResults($event)"></app-search-box>
+
+        <img *ngIf="loading" src="assets/images/loading.gif" alt="loading...">
+    </div>
+    <div class="row">
+        <app-search-result *ngFor="let result of results" [result]="result"></app-search-result>
+    </div>
+
+</main>

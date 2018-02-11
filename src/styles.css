@@ -2,10 +2,13 @@
 
 @import "~bootstrap/dist/css/bootstrap.css";
 
-  .starter-template {
-    padding: 3rem 1.5rem;
+  .heading {
     text-align: center;
   } 
+
+  .container {
+    padding: 3rem 1.5rem;
+  }
 
   input[type=search] {
     margin-bottom: 1rem;
@@ -15,4 +18,9 @@
     margin-bottom: 1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+
+  .card-img-top{
+    width: 250px;
+    height: 190px;
   }
