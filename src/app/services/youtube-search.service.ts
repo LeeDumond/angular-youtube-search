@@ -21,14 +21,15 @@ export class YouTubeSearchService {
             `key=${this.apiKey}`,
             `part=snippet`,
             `type=video`,
-            `maxResults=10`
+            `maxResults=12`
         ].join('&');
 
         const queryUrl = `${this.apiUrl}?${params}`;
 
         return this.http.get(queryUrl).map(response => {
+            // console.log('response', response);
             return <any>response['items'].map(item => {
-                // console.log("raw item", item); // uncomment if you want to debug
+                // console.log('raw item: ', item);
                 return new SearchResult({
                     id: item.id.videoId,
                     title: item.snippet.title,
